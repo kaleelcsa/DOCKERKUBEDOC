@@ -1,0 +1,13 @@
+https://docs.aws.amazon.com/eks/latest/userguide/create-kubeconfig.html
+kubectl get svc
+  179  aws eks --region us-east-2 update-kubeconfig --name mean_eks_demo
+  180  aws eks --region us-east-2 update-kubeconfig --name mean-eks-demo
+  181  ls -la
+  182  cd .kube/
+  183  ls -la
+  184  vi config
+  185  cd ..
+  186  ls
+  187  kubectl get svc
+  188  kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v1.10.1/src/deploy/recommended/kubernetes-dashboard.yaml
+  189  history

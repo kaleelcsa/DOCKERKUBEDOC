@@ -1,0 +1,234 @@
+ 1  aws cli
+    2  curl -o kubectl https://amazon-eks.s3-us-west-2.amazonaws.com/1.14.6/2019-08-22/bin/darwin/amd64/kubectl
+    3  curl -o kubectl https://amazon-eks.s3-us-west-2.amazonaws.com/1.14.6/2019-08-22/bin/linux/amd64/kubectl
+    4  chmod +x ./kubectl
+    5  echo 'export PATH=$HOME/bin:$PATH' >> ~/.bashrc
+    6  kubectl
+    7  mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$HOME/bin:$PATH
+    8  echo 'export PATH=$HOME/bin:$PATH' >> ~/.bashrc
+    9  kubectl
+   10  kubectl version --short --client
+   11   curl -o aws-iam-authenticator https://amazon-eks.s3-us-west-2.amazonaws.com/1.14.6/2019-08-22/bin/linux/amd64/aws-iam-authenticator
+   12  chmod +x ./aws-iam-authenticator
+   13  mkdir -p $HOME/bin && cp ./aws-iam-authenticator $HOME/bin/aws-iam-authenticator && export PATH=$HOME/bin:$PATH
+   14  echo 'export PATH=$HOME/bin:$PATH' >> ~/.bashrc
+   15  aws-iam-authenticator help
+   16  curl --silent --location "https://github.com/weaveworks/eksctl/releases/download/latest_release/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
+   17  ls
+   18  sudo mv /tmp/eksctl /usr/local/bin
+   19  eksctl version
+   20  sudo yum install git
+   21  ls
+   22  git clone https://github.com/kaleelcsa/mean_eks_demo.git
+   23  ls -la
+   24  cd mean_eks_demo/
+   25  ls
+   26  cd k8s/
+   27  ls
+   28  cd cluster_config/
+   29  ls
+   30  eksctl create cluster -f cluster.yaml
+   31  ls -la
+   32  cd mean_eks_demo/
+   33  ls
+   34  cd k8s/
+   35  ls
+   36  cd cluster_config/
+   37  ls
+   38  vi cluster.yaml
+   39  eksctl create cluster -f cluster.yaml
+   40  sudo yum update -y
+   41  sudo amazon-linux-extras install docker
+   42  sudo service docker start
+   43  sudo usermod -a -G docker ec2-user
+   44  doccker info
+   45  docker info
+   46  sudo docker info
+   47  ls
+   48  cd mean_eks_demo/
+   49  ls
+   50  vi Dockerfile
+   51  docker image build -t mean_demo:v1 .
+   52  sudo docker image build -t mean_demo:v1 .
+   53  kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v1.10.1/src/deploy/recommended/kubernetes-dashboard.yaml
+   54  kubectl cluster-info
+   55  kubectl get nodes
+   56  sudo kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v1.10.1/src/deploy/recommended/kubernetes-dashboard.yaml
+   57  cd ..
+   58  ls
+   59  ls -la
+   60  mkdir -p $HOME/.kube
+   61  ls -la
+   62  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+   63  ls
+   64  cd ..
+   65  ls
+   66  cd ..
+   67  ls
+   68  cd usr
+   69  ls
+   70  cd lib
+   71  ls
+   72  kubectl --version
+   73  ls
+   74  cd ..
+   75  ls
+   76  cd ..
+   77  ls
+   78  cd etc
+   79  ls
+   80  which kubernetes
+   81  cd ..
+   82  ls
+   83  cd home
+   84  ls
+   85  cd ec2-user/
+   86  ls
+   87  cd bin
+   88  s
+   89  ls
+   90  cd ..
+   91  ls
+   92  cd ..
+   93  s
+   94   cd ..
+   95  ls
+   96   cd usr
+   97  s
+   98  ls
+   99  cd bun
+  100  cd bin
+  101  ls
+  102  cd ~
+  103  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  104  kubeadm init
+  105  kubeadm config print
+  106  kubectl --version
+  107  kubectl config
+  108  sudo -i
+  109  kubectl
+  110  ls
+  111  sudo ls
+  112  restart
+  113  sudo restart
+  114  ls
+  115  cd mean_eks_demo/
+  116  ls
+  117  cd
+  118  ls
+  119  cd mean_eks_demo/
+  120  ls
+  121  cd k8s/
+  122  sl
+  123  ls
+  124  cd deployment/
+  125  ls
+  126  vi deployment.yaml
+  127  kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v1.10.1/src/deploy/recommended/kubernetes-dashboard.yaml
+  128  ls
+  129  cd .
+  130  ls
+  131  cd ..
+  132  ls
+  133  cd cluster_config/
+  134  ls
+  135  kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v1.10.1/src/deploy/recommended/kubernetes-dashboard.yaml
+  136  sudo kubectl apply -f https://docs.projectcalico.org/v3.1/getting-started/kubernetes/installation/hosted/rbac-kdd.yaml
+  137  kubectl apply -f https://docs.projectcalico.org/v3.1/getting-started/kubernetes/installation/hosted/rbac-kdd.yaml
+  138  kubectl config view
+  139  kubectl version
+  140  ls
+  141  cd ..
+  142  ls
+  143  cd ..
+  144  ls
+  145   cd usr
+  146  ls
+  147  cd local
+  148  ls
+  149  cd bin
+  150  s
+  151  ls
+  152  cd eksctl
+  153  cd ..
+  154  ls
+  155  cd lib
+  156  ls
+  157  cd ..
+  158  ls
+  159  cd ..
+  160  ls
+  161  cd ..
+  162  ls
+  163  cd tmp
+  164  ls
+  165  cd ..
+  166  ls
+  167   sl
+  168  cd home
+  169  sls
+  170  ls
+  171  cd ec2-user/
+  172  ls
+  173  cd bin
+  174  ls
+  175  cd ..
+  176  ls
+  177  ls -la
+  178  kubectl get svc
+  179  aws eks --region us-east-2 update-kubeconfig --name mean_eks_demo
+  180  aws eks --region us-east-2 update-kubeconfig --name mean-eks-demo
+  181  ls -la
+  182  cd .kube/
+  183  ls -la
+  184  vi config
+  185  cd ..
+  186  ls
+  187  kubectl get svc
+  188  kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v1.10.1/src/deploy/recommended/kubernetes-dashboard.yaml
+  189  history
+  190  kubectl apply -f https://raw.githubusercontent.com/kubernetes/heapster/master/deploy/kube-config/influxdb/heapster.yaml
+  191  kubectl apply -f https://raw.githubusercontent.com/kubernetes/heapster/master/deploy/kube-config/influxdb/influxdb.yaml
+  192  kubectl apply -f https://raw.githubusercontent.com/kubernetes/heapster/master/deploy/kube-config/rbac/heapster-rbac.yaml
+  193  ls
+  194  cd mean_eks_demo/
+  195  ls
+  196  cd k8s/
+  197  ls
+  198  cd rbac/
+  199  ls
+  200  kubectl apply -f eks-admin-service-account.yaml
+  201  kubectl apply -f eks-admin-cluster-role-binding.yaml
+  202  kubectl get pods -n kubesystem
+  203  kubectl get pods -n kube-system
+  204  kubectl get nodes
+  205  kubectl get nodes -n kube-system
+  206  cd
+  207  ls
+  208  sudo docker images
+  209  docker images
+  210  systemctl start docker
+  211  docker images
+  212  dockerd
+  213  rm /var/snap/docker/179/run/docker.pid
+  214  service docker stop
+  215  sudo rm -rf /var/lib/docker
+  216  sudo service start docker
+  217  sudo service docker start
+  218  docker images
+  219  docker ps -a
+  220  kubectl get pods -n kube-system
+  221  ls
+  222  cd mean_eks_demo/
+  223  ls
+  224  docker image build -t mean_demo:v1 .
+  225  sudo docker ps -a
+  226  sudo docker images
+  227  kubectl get pods -n kube-system
+  228  sudo (aws ecr get-login --no-include-email --region us-east-2)
+  229  sudo $(aws ecr get-login --no-include-email --region us-east-2)
+  230  docker tag mean_demo:latest 244955041055.dkr.ecr.us-east-2.amazonaws.com/mean_demo:v1
+  231  sudo docker tag mean_demo:latest 244955041055.dkr.ecr.us-east-2.amazonaws.com/mean_demo:v1
+  232  sudo docker tag mean_demo:v1 244955041055.dkr.ecr.us-east-2.amazonaws.com/mean_demo:v1
+  233  sudo docker images
+  234  history

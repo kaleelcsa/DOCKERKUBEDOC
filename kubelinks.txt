@@ -1,0 +1,4 @@
+https://medium.com/better-programming/dockers-voting-app-on-swarm-kubernetes-and-nomad-8835a82050cf
+https://github.com/dockersamples/example-voting-app
+https://docs.bitnami.com/kubernetes/how-to/deploy-mean-application-kubernetes-helm/
+https://devopscube.com/setup-prometheus-monitoring-on-kubernetes/
