@@ -1,0 +1,61 @@
+1  apt-get update
+    2  curl -fsSL get.docker.com -o get-docker.sh
+    3  sh get-docker.sh
+    4  base=https://github.com/docker/machine/releases/download/v0.14.0 &&   curl -L $base/docker-machine-$(uname -s)-$(uname -m) >/tmp/docker-machine &&   sudo install /tmp/docker-machine /usr/local/bin/docker-machine
+    5  apt install docker-compose
+    6  docker ps -a
+    7  docker images
+    8  docker network ls
+    9  docker volume ls
+   10  docker swarm init--advertise-addr 13.232.42.106
+   11  docker swarm init --advertise-addr 13.232.42.106
+   12  docker network ls
+   13  docker node ls
+   14  git --version
+   15  ls -la
+   16  git clone git clone https://github.com/docker/example-voting-app
+   17  git clone https://github.com/docker/example-voting-app
+   18  ls -la
+   19  cd example-voting-app/
+   20  ls -la
+   21  docker stack deploy --compose-file=docker-stack.yml voting_stack
+   22  docker ps -a
+   23  docker network ls
+   24  docker volume ls
+   25  docker  service ps
+   26  docker  service ps voting_stack_vote
+   27  docker  service node ls   voting_stack_vote
+   28  docker  service ls   voting_stack_vote
+   29  docker service ls
+   30  docker  service scale  voting_stack_vote=5
+   31  docker service ls
+   32  docker  service scale  voting_stack_vote=3
+   33  docker service ls
+   34  docker node ls
+   35  docker ps -a
+   36  docker node ls
+   37  docker node update --availability drain hcc31wjz2bgnlxcirbnq0tgw4
+   38  docker node ls
+   39  docker ps -a
+   40  docker node update --availability active  hcc31wjz2bgnlxcirbnq0tgw4
+   41  docker ps -a
+   42  docker  service scale  voting_stack_vote=10
+   43  docker service ls
+   44  docker ps -a
+   45  history
+
+
+worker:
+ 1  apt-get update
+    2  curl -fsSL get.docker.com -o get-docker.sh
+    3  sh get-docker.sh
+    4  base=https://github.com/docker/machine/releases/download/v0.14.0 &&   curl -L $base/docker-machine-$(uname -s)-$(uname -m) >/tmp/docker-machine &&   sudo install /tmp/docker-machine /usr/local/bin/docker-machine
+    5  apt install docker-compose
+    6  docker ps -a
+    7  docker images
+    8  docker network ls
+    9  docker volume ls
+   10  docker swarm join --token SWMTKN-1-41rkn3su2kl6kpfdd4oohacky5yh8nanh7vtxnslkw45c465f7-697l8hv68n6r4jedaw1cmg7hi 13.232.42.106:2377
+   11  docker network ls
+   12  docker ps -a
+   13  history

@@ -1,0 +1,76 @@
+ 1  docker ps -a
+    2  docker images
+    3  docker network ls
+    4  docker volume ls
+    5  ls -la
+    6  docker container inspect c1
+    7  docker container inspect -f "{{ json .GraphDriver }}" c1 | python -m json.tool
+    8  cd /var/lib/docker/overlay2/1013dc6e965db0c05e0b614164f2dec294533efc4cd1e2197563c9d54c9f7d8b/diff
+    9  ls
+   10  cd data
+   11  ls
+   12  cd ~
+   13  ls -la
+   14  docker ps -a
+   15  docker container inspect c2
+   16  cd /var/lib/docker/overlay2/3940456537f76b57aee9fc871b5ff4212a2356b341ee7b1cac186b7126a21d7c/diff
+   17  ls -la
+   18  cd itraindata/
+   19  ls
+   20  ls -la
+   21  cd ~
+   22  docker container inspect -f "{{ json .Mounts }}"  c2 | python -m json.tool
+   23  docker volume ls
+   24  cd /var/lib/docker/volumes/2f8ba8de118cf6d1367cfc41b9ee749ac21aa800844b16d3cab699cbe1a0011c/_data
+   25  ls -la
+   26  cd ~
+   27  cd /var/lib/docker/volumes/html/_data
+   28  touch userdefcon.txt
+   29  docker ps -a
+   30  history
+
+
+
+1  docker ps -a
+    2  docker images
+    3  docker network ls
+    4  docker volume ls
+    5  docker container run --name c1 -ti alpine sh
+    6  docker ps -a
+    7  docker stop 40a608292e40
+    8  docker ps -a
+    9  docker rm 40a608292e40
+   10  docker ps -a
+   11  vi Dockerfile
+   12  docker image build -t itrainimg .
+   13  docker ps -a
+   14  docker images
+   15  docker container run --name c2 -ti itrainimg
+   16  docker ps -a
+   17  docker rm 9441c51da153
+   18  docker ps -a
+   19  docker volume ls
+   20  docker volume create --name html
+   21  docker volume ls
+   22  docker volume inspect html
+   23  docker container run --name www -d -p 8080:80 -v html:/usr/share/nginx/html nginx
+   24  docker ps-a
+   25  docker ps -a
+   26  cd /var/lib/docker/volumes/html/_data
+   27  ls -la
+   28  docker ps -a
+   29  docker volume ls
+   30  docker exec -it cd670b2ed3a9 /bin/bash
+   31  docker volume ls
+   32  docker volume disconnect html www
+   33  docker rm html
+   34  docker volume  rm html
+   35  docker volume  rm html --force
+   36  docker ps -a
+   37  docker stop cd670b2ed3a9
+   38  docker rm  cd670b2ed3a9
+   39  docker ps -a
+   40  docker volume ls
+   41  docker volume  rm html --force
+   42  docker volume ls
+   43  history

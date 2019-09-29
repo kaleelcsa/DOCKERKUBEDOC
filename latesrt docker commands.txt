@@ -1,0 +1,62 @@
+    1  apt-get update
+    2  curl -fsSL get.docker.com -o get-docker.sh
+    3  base=https://github.com/docker/machine/releases/download/v0.14.0 &&   curl -L $base/docker-machine-$(uname -s)-$(uname -m) >/tmp/docker-machine &&   sudo install /tmp/docker-machine /usr/local/bin/docker-machine
+    4  docker-machine --version
+    5  apt-get install docker-compose
+    6  docker ps -a
+    7  docker images
+    8  docker network ls
+    9  docker volume ls
+   10  clear
+   11  ls -l
+   12  docker ps -a
+   13  git --version
+   14  git clone https://github.com/kaleelcsa/devops.git
+   15  ls -la
+   16  chmod 777 -R devops/
+   17  ls -la
+   18  cd devops/
+   19  clera
+   20  clear
+   21  ls -la
+   22  vi Dockerfile
+   23  docker ps -a
+   24  docker volume ls
+   25  docker images
+   26  docker ps -a
+   27  docker images
+   28  docker volume ls
+   29  docker images
+   30  docker ps -a
+   31  docker run -it -p 8080:80,8081:443 08b41404a16d
+   32  docker run -it -p 8080:80,8081:443 bharathkumar27/dockerimage
+   33  docker run -it -p 8080:80 bharathkumar27/dockerimage
+   34  docker run -it -p 8080:80 bharathkumar27/dockerimage:version1.0.0
+  1  ls -la
+    2  cd devops/
+    3  ls
+    4  cd Blob/
+    5  ls -la
+    6  cd ..
+    7  ls
+    8  docker build -t apacheimage .
+    9  docker ps -a
+   10  docker exec -it 618313788c57 /bin/bash
+   11  history
+
+  1  docker ps -a
+    2  docker images
+    3  docker ps -a
+    4  docker commit 1b7292e8c8b1 bharathkumar27/dockerimage:version2.0.0
+    5  docker ps -a
+    6  docker images
+    7  docker image save --output string 2e7e367ce1f9
+    8  docker images
+    9  docker tag 2e7e367ce1f9 bharathkumar27/dockerimage:version2.0.0
+   10  docker images
+   11  docker push bharathkumar27/dockerimage:version2.0.0
+   12  history
+
+
+
+

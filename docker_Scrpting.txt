@@ -1,0 +1,6 @@
+
+				DOCKER COMPOSE
+------------------------------------------------------------------------
+--> yaml
+--> create ubuntu instance with 4 gb ram, 40 gb hard disk.
+--> 
